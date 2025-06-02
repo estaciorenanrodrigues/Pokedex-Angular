@@ -1,27 +1,48 @@
-# Pokedex
+## Features
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.19.
+Design moderno + Animações suaves
+Tailwind 3.4.17 + SCSS
+Versão do Angular 18.2.0 + Angular PWA
 
-## Development server
+- ✔️ Listar Pokémons: Explore a variedade de Pokémons disponíveis na PokeAPI.
+- ✔️ Filtrar Pokémons: Localize os Pokémons que você deseja visualizar.
+- ✔️ Visualizar detalhes do Pokémon: Clique em qualquer Pokémon para visualizar mais detalhes em uma outra rota.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<hr>
+<h1 align="center">Pokedex - Angular</h1>
+</p>
 
-## Code scaffolding
+<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Sobre
 
-## Build
+Essa aplicação é uma pokedex construída em Angular, permitindo aos usuários explorar, filtrar por diferentes Pokémons de uma maneira interativa e moderna.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Com a integração da [PokeAPI](https://pokeapi.co/docsv2), a aplicação proporciona uma experiência de navegação agradável e envolvente para os fãs de Pokémon.
 
-## Running unit tests
+<div align="left" id="top"> 
+  <a href="https://www.linkedin.com/in/estaciorenandesousarodrigues/">Estácio Renan</a>
+</div>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tecnologias
 
-## Running end-to-end tests
+As seguintes ferramentas foram usadas na construção do projeto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [Angular](https://angular.io/)
+- [Tailwind](https://v3.tailwindcss.com/)
+- [RxJs](https://rxjs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Further help
+## 🤠 Características do Projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto foi construído usando vários recursos e práticas recomendadas do Angular, incluindo:
+
+- ✔️ Services: Utiliza Services do Angular para lidar com a lógica de negócios e interações com APIs do pokedex.
+- ✔️ Standalone Components: importações direta no componentes, sem o uso dos módulos.
+
+## :white_check_mark: Pré requisitos
+
+Antes de começar você precisa ter:
+
+- [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua máquina.
+- [Angular CLI version 18.2.0](https://github.com/angular/angular-cli)

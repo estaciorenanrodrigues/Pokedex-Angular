@@ -1,0 +1,12 @@
+<form
+  class="lightSpeedIn flex justify-between items-center bg-white/20 p-3 px-5 rounded-xl mb-5"
+>
+  <input
+    #name
+    type="text"
+    placeholder="Buscar Pokemon"
+    class="placeholder-text w-[95%] bg-transparent border-none text-lg text-white"
+    (keyup)="search(name.value)"
+  />
+  <img src="assets/images/search.svg" alt="Buscar pokemon" />
+</form>

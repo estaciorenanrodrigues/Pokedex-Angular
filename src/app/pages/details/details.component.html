@@ -1,0 +1,55 @@
+<poke-header></poke-header>
+<main class="w-[37.5rem] m-0 m-auto box-border">
+  <ng-content *ngIf="isLoading">
+    <section class="flex relative items-end justify-end h-[75px] p-[30px]">
+      <h1
+        class="slideInLeft text-white text-3xl leading-[0.25] capitalize z-10"
+      >
+        {{ pokemon[0]?.name }}
+      </h1>
+      <h2
+        class="slideInRight absolute text-6xl font-medium text-gray-600 top-0"
+      >
+        {{pokemon?.[1]?.names[0]?.name}}
+      </h2>
+    </section>
+
+    <section class="relative">
+      <img
+        [src]="pokemon[0]?.sprites?.other.dream_world?.front_default"
+        [alt]="pokemon[0]?.name"
+        class="slideInDown absolute top-[-85px] left-8 max-w-32 z-10"
+      />
+      <article
+        class="fadeIn flex flex-col justify-between bg-white min-h-[43.9vh] mt-1 p-[100px] px-[35px] pb-[30px] rounded-2xl"
+      >
+        <section>
+          <h3 class="font-bold text-3xl italic underline text-neutral-950 mb-5">
+            Estatísticas
+          </h3>
+
+          <ol class="pb-4">
+            <li
+              *ngFor="let value of pokemon[0]?.stats"
+              class="flex justify-between text-lg leading-[130%]"
+            >
+              {{ value?.stat?.name }}
+              <strong>
+                {{ value?.base_stat }}
+              </strong>
+            </li>
+          </ol>
+        </section>
+        <a
+          [routerLink]="['']"
+          class="flex justify-center items-center w-full p-5 text-white bg-rose-500 rounded-xl"
+        >
+          Voltar
+        </a>
+      </article>
+    </section>
+  </ng-content>
+  <ng-content *ngIf="apiError">
+    <img src="assets/images/error.png" alt="" width="100%" />
+  </ng-content>
+</main>

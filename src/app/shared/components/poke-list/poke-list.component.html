@@ -1,0 +1,41 @@
+<poke-search (emmitSearch)="getSearch($event)"></poke-search>
+<section class="flex justify-between flex-wrap gap-3">
+  <ng-container *ngIf="getAllPokemons?.length">
+    <ng-content *ngFor="let pokemon of getAllPokemons; let i = index">
+      <a
+        [routerLink]="['details', pokemon?.status?.id]"
+        class="flex relative bg-white p-5 rounded-xl w-[49%] h-[9.813rem]"
+      >
+        <section class="fadeIn">
+          <h2 class="text-xl font-bold mb-3 capitalize">{{ pokemon?.name }}</h2>
+          <ul class="flex flex-col">
+            <li
+              *ngFor="let item of pokemon?.status?.types"
+              class="flex justify-center items-start bg-slate-100 rounded-xl max-w-16 text-xs font-medium capitalize p-1 m-1"
+            >
+              {{ item?.type?.name }}
+            </li>
+          </ul>
+        </section>
+        <section
+          class="pokemon__image flex absolute justify-center items-center right-5 bottom-5 h-24 w-16"
+        >
+          <img
+            [src]="pokemon?.status?.sprites?.other?.dream_world?.front_default"
+            [alt]="pokemon?.name"
+          />
+        </section>
+      </a>
+    </ng-content>
+    <div class="w-full">
+      <poke-pagination
+        [CurrentPaginationConfig]="pagination"
+        [dataPokemon]="getAllPokemons"
+        (PaginationConfig)="page($event)"
+      ></poke-pagination>
+    </div>
+  </ng-container>
+  <ng-content *ngIf="apiError" class="pulse">
+    <img src="assets/images/error.png" alt="" width="100%" />
+  </ng-content>
+</section>

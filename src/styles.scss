@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./config-scss/reset.scss";
+@import "./config-scss/animations.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: #262835;
+  font-family: "Roboto", sans-serif;
+}

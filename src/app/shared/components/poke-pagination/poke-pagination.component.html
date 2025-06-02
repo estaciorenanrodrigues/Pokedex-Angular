@@ -1,0 +1,16 @@
+<div *ngIf="dataPokemon" class="flex justify-between w-[100%] pb-4">
+  <button-general
+    (click)="previousPage()"
+    [isDisabled]="CurrentPaginationConfig.offset === 0"
+    [label]="'Anterior'"
+  />
+
+  <button-general
+    (click)="nextPage()"
+    [isDisabled]="
+      CurrentPaginationConfig.offset + CurrentPaginationConfig.limit >=
+      CurrentPaginationConfig.totalCount
+    "
+    [label]="'Próximo'"
+  />
+</div>
