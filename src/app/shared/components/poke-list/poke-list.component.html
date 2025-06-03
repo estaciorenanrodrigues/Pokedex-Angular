@@ -27,7 +27,7 @@
         </section>
       </a>
     </ng-content>
-    <div class="w-full">
+    <div *ngIf="isSearch" class="w-full">
       <poke-pagination
         [CurrentPaginationConfig]="pagination"
         [dataPokemon]="getAllPokemons"

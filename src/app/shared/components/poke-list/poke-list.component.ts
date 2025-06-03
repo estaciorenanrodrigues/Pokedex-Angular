@@ -20,6 +20,7 @@ export class PokeListComponent implements OnInit {
 
   getAllPokemons!: PokemonInterface[];
   apiError: boolean = false;
+  isSearch: boolean = true;
   pagination: PaginationInterface = {
     offset: 0,
     limit: 10,
@@ -55,6 +56,8 @@ export class PokeListComponent implements OnInit {
       return !res.name.indexOf(value.toLowerCase());
     })
     this.getAllPokemons = filter ? filter : this.setAllPokemons
+    this.isSearch = this.getAllPokemons.length == this.setAllPokemons.length
+
   }
 
   page(valuePage: PaginationInterface) {
